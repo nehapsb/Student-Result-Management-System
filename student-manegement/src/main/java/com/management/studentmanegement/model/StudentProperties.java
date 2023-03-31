@@ -1,11 +1,10 @@
 package com.management.studentmanegement.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Builder
 @Setter
@@ -19,5 +18,5 @@ public class StudentProperties extends BaseClass{
 
     String firstName;
     String lastName;
-    Date dateOfBirth;
+    LocalDate dateOfBirth;
 }
