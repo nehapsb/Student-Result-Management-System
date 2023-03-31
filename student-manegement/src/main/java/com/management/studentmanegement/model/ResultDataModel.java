@@ -12,12 +12,15 @@ import java.util.Date;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@Entity
-@Table(name = "students")
-public class StudentProperties extends BaseClass{
+//@JsonInclude(JsonInclude.Include.NON_NULL)
+@Table(name = "results")
+public class ResultDataModel extends BaseClass{
 
-    String firstName;
-    String lastName;
-    Date dateOfBirth;
+
+//    @JsonProperty(value = "studentId")
+    long studentId;
+//    @JsonProperty(value = "courseId")
+    long courseId;
+    Grade grade;
+
 }

@@ -9,11 +9,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Setter
 @Getter
-@Entity
 @Table(name="courses")
-public class CourseProperties {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    String id;
+public class CourseProperties extends BaseClass{
     String courseName;
 }

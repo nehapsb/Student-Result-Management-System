@@ -1,17 +1,17 @@
 package com.management.studentmanegement.exception;
 
-public class RecordAlreadyExistingException extends RuntimeException{
+public class RecordNotFoundException extends RuntimeException{
 
-    public RecordAlreadyExistingException() {
+    public RecordNotFoundException() {
         super();
     }
-    public RecordAlreadyExistingException(String message){
+    public RecordNotFoundException(String message){
         super(message);
     }
-    public RecordAlreadyExistingException(Throwable throwable){
+    public RecordNotFoundException(Throwable throwable){
         super(throwable);
     }
-    public RecordAlreadyExistingException(String message, Throwable throwable){
+    public RecordNotFoundException(String message, Throwable throwable){
         super(message, throwable);
     }
 }

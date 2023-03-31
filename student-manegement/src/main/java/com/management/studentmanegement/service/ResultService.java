@@ -3,39 +3,35 @@ package com.management.studentmanegement.service;
 import com.management.studentmanegement.database.DataRepository;
 import com.management.studentmanegement.exception.RecordAlreadyExistingException;
 import com.management.studentmanegement.exception.RecordNotFoundException;
-import com.management.studentmanegement.model.StudentProperties;
+import com.management.studentmanegement.model.CourseProperties;
+import com.management.studentmanegement.model.ResultDataModel;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
-import java.awt.*;
 
 @Component
-public class StudentService {
+public class ResultService {
 
-    private DataRepository<StudentProperties> dataRepository;
+    private DataRepository<ResultDataModel> dataRepository;
 
     @Inject
-    public StudentService(DataRepository<StudentProperties> dataRepository) {
+    public ResultService(DataRepository<ResultDataModel> dataRepository) {
         this.dataRepository = dataRepository;
     }
 
-
-    public void addStudent(StudentProperties studentProperties) throws RecordAlreadyExistingException {
-
+    public void addResult(ResultDataModel studentProperties) throws RecordAlreadyExistingException {
         dataRepository.save(studentProperties);
     }
 
-    public void updateStudentDetails(StudentProperties studentProperties) {
+    public void updateResultDetails(ResultDataModel studentProperties) {
         dataRepository.save(studentProperties);
     }
-    public Iterable<StudentProperties> getStudentDetails() {
-        return dataRepository.findAll();
-    }
-    public StudentProperties getStudentDetails(Long studentId) {
+
+    public ResultDataModel getResultDetails(long studentId) {
         return dataRepository.findById(studentId).orElseThrow(() -> new RecordNotFoundException());
     }
-    public void deleteStudent(long id) {
+    public void deleteResult(long id) {
         dataRepository.deleteById(id);
     }
 }

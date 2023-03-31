@@ -2,22 +2,22 @@ package com.management.studentmanegement.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.Date;
 
-@Builder
-@Setter
-@Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@Setter
+@Getter
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Entity
-@Table(name = "students")
-public class StudentProperties extends BaseClass{
-
-    String firstName;
-    String lastName;
-    Date dateOfBirth;
+public abstract class BaseClass {
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @JsonProperty(value = "id")
+    Long id;
 }
