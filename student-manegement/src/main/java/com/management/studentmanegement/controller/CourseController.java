@@ -1,30 +1,31 @@
 package com.management.studentmanegement.controller;
 
-import com.management.studentmanegement.model.StudentProperties;
-import com.management.studentmanegement.service.StudentService;
+import com.management.studentmanegement.model.CourseProperties;
+import com.management.studentmanegement.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/v1/student")
-public class StudentController {
+@RequestMapping("/api/v1/course")
+public class CourseController {
 
     @Autowired
-    private StudentService studentService;
+    private CourseService courseService;
 
     @GetMapping
-    public Iterable<StudentProperties> get() {
-        return studentService.getStudentDetails();
+    public Iterable<CourseProperties> get() {
+        return courseService.getAllCourses();
     }
 
     @GetMapping(value = "/id")
-    public StudentProperties get(@RequestParam Long id) {
-        return studentService.getStudentDetails(id);
+    public CourseProperties get(@RequestParam Long id) {
+        return courseService.getCourse(id);
     }
 
     @PostMapping(value = "/save")
-    public void save(@RequestBody StudentProperties studentProperties) {
-        studentService.addStudent(studentProperties);
+    public void save(@RequestBody CourseProperties courseProperties) {
+        courseService.addCourse(courseProperties);
     }
 
 

@@ -1,17 +1,17 @@
 package com.management.studentmanegement.exception;
 
-public class RecordAlreadyExistingException extends RuntimeException{
+public class InvalidDataException extends RuntimeException{
 
-    public RecordAlreadyExistingException() {
+    public InvalidDataException() {
         super();
     }
-    public RecordAlreadyExistingException(String message){
+    public InvalidDataException(String message){
         super(message);
     }
-    public RecordAlreadyExistingException(Throwable throwable){
+    public InvalidDataException(Throwable throwable){
         super(throwable);
     }
-    public RecordAlreadyExistingException(String message, Throwable throwable){
+    public InvalidDataException(String message, Throwable throwable){
         super(message, throwable);
     }
 }
