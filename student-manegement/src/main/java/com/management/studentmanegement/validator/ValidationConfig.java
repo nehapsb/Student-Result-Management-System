@@ -1,8 +1,8 @@
 package com.management.studentmanegement.validator;
 
-import com.management.studentmanegement.model.CourseProperties;
-import com.management.studentmanegement.model.ResultDataModel;
-import com.management.studentmanegement.model.StudentProperties;
+import com.management.studentmanegement.model.course.CourseProperties;
+import com.management.studentmanegement.model.result.ResultDataModel;
+import com.management.studentmanegement.model.student.StudentProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;

@@ -2,7 +2,7 @@ package com.management.studentmanegement.validator;
 
 import com.management.studentmanegement.exception.InvalidDataException;
 import com.management.studentmanegement.exception.RecordNotFoundException;
-import com.management.studentmanegement.model.ResultDataModel;
+import com.management.studentmanegement.model.result.ResultDataModel;
 import com.management.studentmanegement.service.CourseService;
 import com.management.studentmanegement.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;

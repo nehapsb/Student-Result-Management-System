@@ -1,13 +1,9 @@
 package com.management.studentmanegement.validator;
 
 import com.management.studentmanegement.exception.InvalidDataException;
-import com.management.studentmanegement.model.CourseProperties;
-import com.management.studentmanegement.model.StudentProperties;
+import com.management.studentmanegement.model.course.CourseProperties;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Component;
-
-import java.time.LocalDate;
-import java.time.Period;
 
 @Component("CourseDataValidator")
 public class CourseDataValidator implements ValidationService<CourseProperties> {

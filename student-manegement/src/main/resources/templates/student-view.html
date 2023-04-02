@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+</head>
+
+<body style="text-align:center">
+
+<div id = "students">
+    <h1>Welcome to Student Result Management System</h1>
+    <br>
+    <h3>Students</h3>
+    <br />
+    <table border="1" style="margin-left: auto;margin-right: auto;">
+        <tr>
+            <td>Id</td>
+            <td>First Name</td>
+            <td>Family Name</td>
+            <td>Date of Birth</td>
+        </tr>
+        <tr th:each="student : ${students}">
+            <td th:text="${student.id}">Id</td>
+            <td th:text="${student.firstName}">First Name</td>
+            <td th:text="${student.lastName}">Family Name</td>
+            <td th:text="${student.dateOfBirth}">Date of Birth</td>
+        </tr>
+    </table>
+</div>
+<br/>
+<br/>
+<div id="student_create_button">
+    <input type="button" onclick="window.location.href = './student_create_page'" value="Add Student">
+</div>
+<br/>
+<br/>
+<div id="home">
+    <input type="button" onclick="window.location.href = './home'" value="Home">
+</div>
+</body>
+</html>

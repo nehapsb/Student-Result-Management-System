@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+<head>
+    <meta charset = "ISO-8859-1" />
+    <title>Add Results</title>
+    <script>
+    function validateResults() {
+        alert(" Result was added successfully!");
+        return true;
+    }
+    </script>
+</head>
+
+<body style="text-align:center">
+<header><h1>Add a new Result</h1></header>
+<br/>
+<br/>
+<div id="resultCreate">
+    <form id = "resultRegistration" onsubmit="./result_create" action="./result_create">
+        <label for="studentId">Student:</label><br/>
+        <select id="studentId" class="form-control" name = "studentId">
+            <option  th:each="student : ${students}" th:value="${student.id}" th:text="${student.firstName}"></option>
+        </select>
+        <br/>
+        <label for="courseId">Course:</label><br/>
+        <select id="courseId" class="form-control" name = "courseId">
+            <option th:each="course : ${courses}" th:value="${course.id}" th:text="${course.courseName}"></option>
+        </select>
+        <br/>
+        <label for="resultSelect">Results:</label><br/>
+        <select id="resultSelect" class="form-control" name = "grade">
+            <option th:each="resultOption : ${resultOptions}" th:value="${resultOption}" th:text="${resultOption}"></option>
+        </select>
+        <br/>
+        <br/>
+        <input type="submit" id= "resultSubmit" value="Submit"  th:onclick="'validateResults()'">
+
+    </form>
+</div>
+
+<br/>
+<br/>
+<div id="view_result_panel">
+    <input type="button" onclick="window.location.href = './result_view'" value="View Results" />
+</div>
+<br/>
+<br/>
+<div id="home">
+    <input type="button" onclick="window.location.href = './home'" value="Home">
+</div>
+</body>
+</html>

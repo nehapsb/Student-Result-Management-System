@@ -3,7 +3,7 @@ package com.management.studentmanegement.service;
 import com.management.studentmanegement.database.DataRepository;
 import com.management.studentmanegement.exception.InvalidDataException;
 import com.management.studentmanegement.exception.RecordNotFoundException;
-import com.management.studentmanegement.model.StudentProperties;
+import com.management.studentmanegement.model.student.StudentProperties;
 import com.management.studentmanegement.validator.ValidationService;
 import org.springframework.stereotype.Component;
 import org.springframework.beans.factory.annotation.Qualifier;

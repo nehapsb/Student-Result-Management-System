@@ -2,14 +2,24 @@
 <html xmlns:th="https://www.thymeleaf.org">
 <head lang="en">
     <meta charset="UTF-8"/>
-    <title>ReactJS + Spring Data REST</title>
-    <link rel="stylesheet" href="/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Student Result Management System</title>
+    <link rel="stylesheet" href="/css/main.css" />
 </head>
 <body>
-<p align="center"><h1>Student Result Management System</h1></p>
-<div id="react"></div>
-
-<script src="built/bundle.js"></script>
-
+<header>
+    <h2>Student Result Management System</h2>
+</header>
+<section>
+    <nav>
+        <ul>
+            <li><a href="./student_view">Students</a></li>
+            <br/>
+            <li><a href="./course_view">Courses</a></li>
+            <br/>
+            <li><a href="./result_view">Results</a></li>
+        </ul>
+    </nav>
+</section>
 </body>
 </html>

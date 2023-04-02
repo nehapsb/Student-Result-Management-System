@@ -1,26 +1,23 @@
 package com.management.studentmanegement.service;
 
-import com.management.studentmanegement.database.DataRepository;
+import com.management.studentmanegement.database.CourseDataRepository;
 import com.management.studentmanegement.exception.InvalidDataException;
-import com.management.studentmanegement.exception.RecordAlreadyExistingException;
 import com.management.studentmanegement.exception.RecordNotFoundException;
-import com.management.studentmanegement.model.CourseProperties;
-import com.management.studentmanegement.model.StudentProperties;
+import com.management.studentmanegement.model.course.CourseProperties;
 import com.management.studentmanegement.validator.ValidationService;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import javax.inject.Inject;
-import java.util.Optional;
 
 @Component
 public class CourseService {
 
-    private DataRepository<CourseProperties> dataRepository;
+    private CourseDataRepository<CourseProperties> dataRepository;
     private ValidationService<CourseProperties> validationService;
 
     @Inject
-    public CourseService(DataRepository<CourseProperties> dataRepository,
+    public CourseService(CourseDataRepository<CourseProperties> dataRepository,
                          @Qualifier("CourseDataValidator") ValidationService<CourseProperties> validationService) {
         this.dataRepository = dataRepository;
         this.validationService = validationService;

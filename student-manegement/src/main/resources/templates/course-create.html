@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+<head>
+    <meta charset = "ISO-8859-1" />
+    <title>Add Courses</title>
+    <script>
+          <script>
+    function validate() {
+              var courseName = $('#courseName').val();
+        if(courseName == ""){
+           alert("Please enter a Course to continue");
+           $('#courseName').focus();
+           return false;
+        }
+        alert(" Course was added successfully!");
+        return true;
+    }
+    </script>
+
+</head>
+
+<body style="text-align:center">
+<header>Add a new Course</header>
+<br/>
+<br/>
+<div>
+    <form onsubmit="./course_create" action="./course_create">
+        <label for="courseName">Name:</label><br/>
+        <input type="text" id="courseName" name="courseName"><br/>
+        <br/>
+        <input type="submit" value="Add">
+    </form>
+</div>
+<br/>
+<br/>
+<div id="view_student_panel">
+    <input type="button" onclick="window.location.href = './course_view'" value="View Courses" />
+</div>
+<br/>
+<br/>
+<div id="home">
+    <input type="button" onclick="window.location.href = './home'" value="Home">
+</div>
+</body>
+</html>
