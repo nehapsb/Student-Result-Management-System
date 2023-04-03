@@ -25,10 +25,10 @@ public class StudentProperties extends StudentBaseClass{
     Long id;
 
     @NotEmpty
-    @Size(min = 3)
+    @Size(min = 1)
     String firstName;
     @NotEmpty
-    @Size(min = 3)
+    @Size(min = 1)
     String lastName;
     @NotEmpty
     String dateOfBirth;
